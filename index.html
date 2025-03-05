@@ -1,12 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logoisp</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logoips</title>
+  <link rel="icon" type="image/svg" href="assets/logo-sm.svg">
+  <!-- styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
-    
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <nav class="nav container">
+      <div class="d-flex justify-content-between align-items-center h-100">
+        <a href="#" class="nav__logo">
+          <img src="assets/logo-bg.svg" alt="">
+        </a>
+      </div>
+      <div class="nav__toggle ms-auto my-auto" id="nav-toggle">
+        <i class="ri-menu-line nav__toggle-menu"></i>
+        <i class="ri-close-line nav__toggle-close"></i>
+      </div>
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button fw-bold">
+              Blog <img id="blog_arrow" class="dropdown__arrow hidden" src="assets/icons/nav/arrow-sm-right.png">
+            </div>
+            <!-- DROPDOWN DATA -->
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">City</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Forest</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Water</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button fw-bold">
+              Products <img id="products_arrow" class="dropdown__arrow hidden"
+                src="assets/icons/nav/arrow-sm-right.png">
+            </div>
+
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Product-A</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Product-B</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Product-C</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Product-D</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Product-E</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Product-F</span></a>
+                </div>
+                <div class="dropdown__group">
+                  <a href="#"><span class="dropdown__title">Product-G</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="nav__link fw-bold">About</a>
+          </li>
+        </ul>
+        <ul class="nav-footer">
+          <li>
+            <a href="#" class="nav__link">Imressum</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link">Datenschutz</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link">&copy; 2023 Loremipsum GmbH</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--=============== HERO ===============-->
+  <section class="hero d-flex align-items-center m-3">
+    <div class="container text-center text-white">
+      <h1 class="display-3 mx-auto fw-bold">The start of a great <br> adventure.</h1>
+      <p class="lead mx-auto hero-text">
+        Porta dui sed mattis odio cras integer sapien proin diam. Malesuada purus bibendum nulla libero ut etiam ut.
+        Amet odio felis gravida porta accumsan arcu. Libero neque mi vestibulum habitant neque sagittis venenatis.
+      </p>
+      <button class="btn btn-light rounded-pill px-4 py-2 fw-medium" type="button">Read more</button>
+    </div>
+  </section>
+  <!--=============== PRODUCTS SECTION ===============-->
+  <div class="container mt-5">
+    <h2 class="fw-light">Our Products</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card border-light bg-product-g">
+          <img src="assets/imgs/product.png" class="card-img-top mb-4" alt="Product-G">
+          <div class="card-body text-white product-descr">
+            <h5 class="card-title">Product G</h5>
+            <p class="card-text">A diam dolor gravida eu et nibh morbi at nullam. Enim urna quis vitae arcu donec purus.
+              Faucibus iaculis at duis pulvinar eget. Ipsum ut cras magna.</p>
+            <div class="circle-container">
+              <a href="#">
+                <img src="assets/icons/nav/arrow-right.png " width="20px" height="20px">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-light bg-product-f">
+          <img src="assets/imgs/product.png" class="card-img-top mb-4" alt="Product-F">
+          <div class="card-body text-white product-descr">
+            <h5 class="card-title">Product F</h5>
+            <p class="card-text">Nec eget dui pulvinar ut at neque duis. Integer ligula donec vel risus malesuada sed id
+              faucibus. Sed cursus morbi egestas tincidunt metus ipsum.</p>
+            <div class="circle-container">
+              <a href="#">
+                <img src="assets/icons/nav/arrow-right.png " width="20px" height="20px">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-light bg-product-a">
+          <img src="assets/imgs/product.png" class="card-img-top mb-4" alt="Product-A">
+          <div class="card-body text-white product-descr">
+            <h5 class="card-title">Product A</h5>
+            <p class="card-text">Tellus tellus nibh duis scelerisque nibh consequat. Volutpat consectetur maecenas
+              volutpat odio. Vulputate nisl morbi et scelerisque cras. Non et.</p>
+            <div class="circle-container">
+              <a href="#">
+                <img src="assets/icons/nav/arrow-right.png " width="20px" height="20px">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="link-secondary text-end m-4 link-offset-2 fw-medium" href="#">
+      <p>Show All</p>
+    </a>
+  </div>
+  <!--=============== BLOG SECTION ===============-->
+  <div class="container mt-5">
+    <div class="text-center lead mx-auto blog-text">
+      <h2 class="fw-light">Blog</h2>
+      <p>Diam enim suscipit habitant ac nunc arcu commodo pulvinar massa. <br> Odio pellentesque fusce elit facilisi
+        risus blandit dictum turpis erat. A vestibulum sed scelerisque quis in.</p>
+    </div>
+    <div class="mt-5 mb-3 d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
+      <input type="checkbox" class="btn-check" id="tag1" autocomplete="off">
+      <label class="btn rounded-pill bg-checks" for="tag1">Show All</label>
+
+      <input type="checkbox" class="btn-check" id="tag2" autocomplete="off">
+      <label class="btn rounded-pill bg-checks" for="tag2">City</label>
+
+      <input type="checkbox" class="btn-check" id="tag3" autocomplete="off">
+      <label class="btn rounded-pill bg-checks" for="tag3">Forest</label>
+
+      <input type="checkbox" class="btn-check" id="tag4" autocomplete="off">
+      <label class="btn rounded-pill bg-checks" for="tag4">Water</label>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card">
+            <img src="assets/imgs/slider/carousel-1.jpeg" class="card-img" alt="Image 1">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-white">
+            <img src="assets/imgs/slider/carousel-2.jpeg" class="card-img" alt="Image 2">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-white">
+            <img src="assets/imgs/slider/carousel-3.jpeg" class="card-img" alt="Image 3">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-white">
+            <img src="assets/imgs/slider/carousel-4.jpeg" class="card-img" alt="Image 4">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-white">
+            <img src="assets/imgs/slider/carousel-5.jpeg" class="card-img" alt="Image 5">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-white">
+            <img src="assets/imgs/slider/carousel-6.jpeg" class="card-img" alt="Image 6">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-white">
+            <img src="assets/imgs/slider/carousel-7.jpeg" class="card-img" alt="Image 7">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card text-white">
+            <img src="assets/imgs/slider/carousel-8.jpeg" class="card-img" alt="Image 8">
+            <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
+              <button class="btn btn-light rounded-pill px-4 py-2">
+                Lorem Ipsum
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="circle-container">
+        <div class="swiper-button-next custom-next"></div>
+      </div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+  <!--=============== MINI-BLOG SECTION ===============-->
+  <div class="container my-5">
+    <div class="card border-0 shadow bg-mblog text-white">
+      <div class="row g-0 h-100">
+        <div class="col-md-4 order-2 order-md-1 d-flex flex-column p-4">
+          <div class="mb-2">
+            <h2 class="card-title fw-light">Enim nulla facilisis viverra lobortis</h5>
+              <p class="card-text fw-light">
+                Lectus orci lectus in leo vel. A venenatis sagittis nunc fermentum urna a morbi.
+                Sed luctus mi vulputate posuere quis. Amet dolor rhoncus tincidunt porta faucibus
+                lorem in integer et.
+              </p>
+          </div>
+          <div class="mt-auto p-3">
+            <a href="#" class="btn btn-light rounded-pill">Read more</a>
+          </div>
+        </div>
+        <div class="col-md-8 order-1 order-md-2">
+          <img src="assets/imgs/card-img.jpg" alt="cardimage" class="img-fluid card-img-right">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=============== HIGHLIGHTS SECTION ===============-->
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm text-center bg-light h-100">
+          <div class="card-body">
+            <div class="my-3">
+              <img src="assets/icons/highlights/icon-a.svg" alt="icon-a">
+            </div>
+            <div>
+              <h5 class="card-title fw-bold">Highlight A</h5>
+              <p class="card-text">
+                Eros elit duis arcu et risus lorem quis rutrum libero.
+                At et diam orci sed leo vestibulum.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm text-center bg-light h-100">
+          <div class="card-body">
+            <div class="my-3">
+              <img src="assets/icons/highlights/icon-b.svg" alt="icon-b">
+            </div>
+            <h5 class="card-title fw-bold">Highlight B</h5>
+            <p class="card-text">
+              Felis nunc rutrum ullamcorper cursus felis risus est sapien faucibus.
+              Gravida aliquam.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm text-center bg-light h-100">
+          <div class="card-body">
+            <div class="my-3">
+              <img src="assets/icons/highlights/icon-c.svg" alt="icon-c">
+            </div>
+            <div class="align-items-center justify-content-center">
+              <h5 class="card-title fw-bold ">Highlight C</h5>
+              <p class="card-text mx-auto">
+                Pulvinar diam pellentesque facilisi elementum pellentesque.
+                Commodo leo fermentum leo.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=============== SCROLL BACK BUTTON ===============-->
+  <div class="container d-flex justify-content-center align-items-center" id="scroll-back">
+    <div class="circle-container-scroll">
+      <a href="#">
+        <img src="assets/icons/nav/arrow-sm-up.png " width="20px" height="20px" alt="">
+      </a>
+    </div>
+  </div>
+  <!--=============== FOOTER ===============-->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Loremipsum GmbH</h5>
+          <p>Musterstraße 16<br>1245 Musterstadt</p>
+          <p>Telefon: 0123 / 456789-10<br>Telefax: 0123 / 456789-11</p>
+          <button class="btn btn-grey rounded-pill py-2 px-3  fw-bold">Zur Kontaktseite</button>
+        </div>
+        <div class="col-md-3">
+          <h5>Corporate</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-dark ">About</a></li>
+            <li><a href="#" class="text-dark">Who we are</a></li>
+            <li><a href="#" class="text-dark">Team</a></li>
+            <li><a href="#" class="text-dark">Jobs</a></li>
+            <li><a href="#" class="text-dark">Development</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Products</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-dark">Product-A</a></li>
+            <li><a href="#" class="text-dark">Product-B</a></li>
+            <li><a href="#" class="text-dark">Product-C</a></li>
+            <li><a href="#" class="text-dark">Product-D</a></li>
+            <li><a href="#" class="text-dark">Product-E</a></li>
+            <li><a href="#" class="text-dark">Product-F</a></li>
+            <li><a href="#" class="text-dark">Product-G</a></li>
+            <li><a href="#" class="text-dark">Show all</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 d-flex flex-column">
+          <h5>Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-dark">Downloads</a></li>
+            <li><a href="#" class="text-dark">FAQ</a></li>
+          </ul>
+          <div class="mt-auto">
+            <a href="#" class="text-dark d-inline-flex align-items-center">
+              <img src="assets/icons/medias/youtube.png" alt="YouTube">
+              <span class="ms-2">Youtube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--=============== COPYRIGHT SECTION ===============-->
+  <div class="container d-flex justify-content-between align-items-center my-5">
+    <span class="text-muted">&copy; 2023 Loremipsum GmbH</span>
+    <div>
+      <a href="#" class="text-muted text-decoration-none me-3">Impressum</a>
+      <a href="#" class="text-muted text-decoration-none">Datenschutz</a>
+    </div>
+  </div>
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/nav.js"></script>
 </body>
+
 </html>

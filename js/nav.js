@@ -1,3 +1,8 @@
+/* 
+  This file implements the small logic of 
+  interactivity of header(navigation bar)
+*/
+
 /*=============== SHOW MENU ===============*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
@@ -11,8 +16,8 @@ const showMenu = (toggleId, navId) => {
     // Add show-icon to show and hide menu icon
     toggle.classList.toggle('show-icon')
     // Showing the arrows for accordion  
-    blog_arrow.classList.toggle('hidden')
-    products_arrow.classList.toggle('hidden')
+    blog_arrow.classList.remove('hidden')
+    products_arrow.classList.remove('hidden')
   })
 }
 

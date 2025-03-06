@@ -1,3 +1,7 @@
+/* 
+  Implementation of Swiper object
+*/
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     spaceBetween: 30,
@@ -10,19 +14,19 @@ var swiper = new Swiper(".mySwiper", {
     },
     loop: true,
     breakpoints: {
-      // при ширине экрана >= 1400px — 4 слайда
+      // Screen width  >= 1400px — 4 Slides
       1400: {
         slidesPerView: 4
       },
-      // при ширине экрана >= 1200px — 3 слайда
+      // Screen width >= 1200px — 3 Slides
       1200: {
         slidesPerView: 3
       },
-      // при ширине экрана >= 992px — 2 слайда
+      // Screen width >= 992px — 2 Slides
       992: {
         slidesPerView: 2
       },
-      // при ширине экрана < 992px — 1 слайд
+      // Screen width < 992px — 1 Slide
       0: {
         slidesPerView: 1
       }

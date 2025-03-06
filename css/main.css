@@ -343,6 +343,12 @@ footer a:hover::after {
 }
 
 @media screen and (max-width: 1118px) {
+  .nav__logo img{
+    padding: 3px;
+    width: 172.5px;
+    height: 40px
+  }
+  
   .nav__menu {
     background-color: var(--body-color);
     position: absolute;
